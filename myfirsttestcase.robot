@@ -73,7 +73,7 @@ ${URL}            https://www.irctc.co.in/nget/train-search
 ${BROWSER}        Chrome
 ${FROM_STATION}   CHENNAI EGMORE - MS
 ${TO_STATION}     MADURAI JN - MDU
-${JOURNEY_DATE}   30/08/2025
+${JOURNEY_DATE}   15/11/2025
 
 *** Test Cases ***
 Search Train in IRCTC
