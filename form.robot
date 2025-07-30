@@ -1,0 +1,182 @@
+*** Settings ***
+Library   SeleniumLibrary
+
+*** Variables ***
+${LOGIN_URL}   https://www.tutorialspoint.com/selenium/practice/login.
+${REGISTER_URL}  https://www.tutorialspoint.com/selenium/practice/register.php
+${TEXTFIELD}   https://www.tutorialspoint.com/selenium/practice/text-box.php
+${CHECK_URL}   https://www.tutorialspoint.com/selenium/practice/check-box.php
+${RADIO_URL}   https://www.tutorialspoint.com/selenium/practice/radio-button.php
+${WEB_URL}    https://www.tutorialspoint.com/selenium/practice/webtables.php
+${BROWSER}  chrome
+${EMAIL}  sanjai@gmail.com
+${FIRSTNAME}  SANJAI
+${LASTNAME}   CSE
+${USERNAME}  sanjai
+${PASSWORD}  12345678
+${ADDRESS}   CHENNAI
+
+*** Keywords ***
+Login Page
+    Open Browser  ${LOGIN_URL}  ${BROWSER}
+    Maximize Browser Window
+    Sleep  2s
+
+    Click Element  xpath=//input[@name='email']
+    Input Text  xpath=//input[@name='email']  ${EMAIL}
+    Sleep  2s
+    Press Keys  xpath=//input[@name='email']  RETURN
+
+    Click Element  xpath=//input[@name='password']
+    Input Text  xpath=//input[@name='password']  ${PASSWORD}
+    Sleep  2s
+    Press Keys  xpath=//input[@name='password']  RETURN
+
+
+    Click Button  xpath=//*[@id="signInForm"]/div[3]/input
+    Sleep  2s
+
+    Close Browser
+
+REGISTER PAGE
+
+    Open Browser  ${REGISTER_URL}  ${BROWSER}
+    Maximize Browser Window
+    Sleep  2s
+
+    Click Element  xpath=//input[@name='firstname']
+    Input Text  xpath=//input[@name='firstname']  ${FIRSTNAME}
+    Sleep  2s
+    Press Keys  xpath=//input[@name='firstname']  RETURN
+
+    Click Element  xpath=//input[@name='lastname']
+    Input Text  xpath=//input[@name='lastname']  ${LASTNAME}
+    Sleep  2s
+    Press Keys  xpath=//input[@name='lastname']  RETURN
+
+    Click Element  xpath=//input[@name='username']
+    Input Text  xpath=//input[@name='username']  ${USERNAME}
+    Sleep  2s
+    Press Keys  xpath=//input[@name='username']  RETURN
+
+    Click Element  xpath=//input[@name='password']
+    Input Text  xpath=//input[@name='password']  ${PASSWORD}
+    Sleep  2s
+    Press Keys  xpath=//input[@name='password']  RETURN
+
+
+    Click Button  xpath=//*[@id="signupForm"]/div[5]/input
+    Sleep  3s
+
+    Click Button  xpath=//*[@id="signupForm"]/div[5]/a
+    Sleep  5s
+
+    Close Browser
+
+TEXT FIELD
+
+    Open Browser  ${TEXTFIELD}  ${BROWSER}
+    Maximize Browser Window
+    Sleep  2s
+
+    Click Element  xpath=//input[@name='fullname']
+    Input Text  xpath=//input[@name='fullname']  ${FIRSTNAME}
+    Sleep  2s
+    Press Keys  xpath=//input[@name='fullname']  RETURN
+
+    Click Element  xpath=//input[@name='email']
+    Input Text  xpath=//input[@name='email']  ${EMAIL}
+    Sleep  2s
+    Press Keys  xpath=//input[@name='email']  RETURN
+
+    Click Element  xpath=//*[@id="address"]
+    Input Text  xpath=//*[@id="address"]  ${ADDRESS}
+    Sleep  2s
+    Press Keys  xpath=//*[@id="address"]  RETURN
+
+    Click Element  xpath=//input[@name='password']
+    Input Text  xpath=//input[@name='password']  ${PASSWORD}
+    Sleep  2s
+    Press Keys  xpath=//input[@name='password']  RETURN
+
+    Click Button  //*[@id="TextForm"]/div[5]/input
+
+    Close Browser
+
+CHECK BOX
+    Open Browser  ${CHECK_URL}  ${BROWSER}
+    Maximize Browser Window
+    Sleep  2s
+
+    Page Should Contain Checkbox  xpath=//*[@id="c_bs_1"]
+    Select Checkbox  xpath=//*[@id="c_bs_1"]
+    Sleep  2s
+
+#    Page Should Contain Checkbox  xpath=//*[@id="c_bs_1"]
+#    Checkbox Should Not Be Selected  xpath=//*[@id="c_bs_1"]
+#    Sleep  1s
+#    Click Element  //*[@id="bs_1"]/span[1] RETURN
+#    Sleep  1s
+
+    Page Should Contain Checkbox  xpath=//*[@id="c_bf_1"]
+    Select Checkbox  xpath=//*[@id="c_bf_1"]
+    Sleep  5s
+
+
+
+    Page Should Contain Checkbox  xpath=//*[@id="c_bs_2"]
+    Select Checkbox  xpath=//*[@id="c_bs_2"]
+    Sleep  5s
+
+    Close Browser
+
+RADIO BUTTON
+    Open Browser  ${RADIO_URL}  ${BROWSER}
+    Maximize Browser Window
+    Sleep  2s
+
+    Page Should Contain Radio Button  name=tab
+    Select Radio Button  tab  igottwo
+    Radio Button Should Be Set To  tab  igottwo
+
+    Page Should Contain Radio Button  name=tab
+    Select Radio Button  tab  igotthree
+    Radio Button Should Be Set To  tab  igotthree
+
+
+    Sleep  2s
+    Close Browser
+
+
+WEB TABLE
+    Open Browser  ${WEB_URL}  ${BROWSER}
+
+
+
+
+
+
+
+
+*** Test Cases ***
+FORM PAGE
+#    REGISTER PAGE
+#    TEXT FIELD
+#    CHECK BOX
+#    RADIO BUTTON
+    WEB TABLE
+
+
+
+
+#    Login Page
+
+
+
+
+
+
+
+
+
+

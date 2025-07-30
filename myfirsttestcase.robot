@@ -71,8 +71,8 @@ Library           SeleniumLibrary
 *** Variables ***
 ${URL}            https://www.irctc.co.in/nget/train-search
 ${BROWSER}        Chrome
-${FROM_STATION}   CHENNAI EGMORE - MS
-${TO_STATION}     MADURAI JN - MDU
+${FROM_STATION}   MGR CHENNAI CTL - MAS
+${TO_STATION}     COIMBATORE JN - CBE
 ${JOURNEY_DATE}   30/08/2025
 
 *** Test Cases ***
@@ -102,7 +102,7 @@ Search Train in IRCTC
     FOR  ${i}  IN RANGE  10
         Press Keys    xpath=//*[@id="jDate"]/span/input    BACKSPACE
     END
-    Press Keys       xpath=//*[@id="jDate"]/span/input    ${JOURNEY_DATE}
+    Press Keys       xpath=//*[@id="jDate"]/span/input    30/08/2025
     Press Keys       xpath=//*[@id="jDate"]/span/input    TAB
     Sleep            2s
 
@@ -110,7 +110,7 @@ Search Train in IRCTC
     #choosing the Category
     Click Element    xpath=//span[contains(text(),'GENERAL')]
     Sleep            1s
-    Click Element    xpath=//span[text()='TATKAL']
+    Click Element    xpath=//span[text()='GENERAL']
 
 
     #choosing the Classes
@@ -121,6 +121,9 @@ Search Train in IRCTC
 
     Click Button     xpath=//button[contains(text(), 'Search')]
     Sleep            5s
+
+#    Click Button     xpath=//*[@id="divMain"]/div/app-train-list/div[4]/div[3]/div[5]/div[3]/div[1]/app-train-avl-enq/div[2]/div/span/span/button[1]
+#    sleep            2s
 
     Close Browser
 
