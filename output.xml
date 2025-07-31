@@ -1,53 +1,239 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.9.13 on win32)" generated="2025-07-31T12:08:04.273455" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.9.13 on win32)" generated="2025-07-31T14:45:59.246335" rpa="false" schemaversion="5">
 <suite id="s1" name="Form" source="C:\Users\sanja\Documents\TestingseleniumRobot\form.robot">
-<test id="s1-t1" name="FORM PAGE" line="248">
+<test id="s1-t1" name="FORM PAGE" line="296">
 <kw name="FORM PAGE">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-07-31T12:08:04.525135" level="INFO">Opening browser 'chrome' to base url 'https://www.tutorialspoint.com/selenium/practice/selenium_automation_practice.php'.</msg>
+<msg time="2025-07-31T14:45:59.527534" level="INFO">Opening browser 'chrome' to base url 'https://www.tutorialspoint.com/selenium/practice/selenium_automation_practice.php'.</msg>
 <arg>${FORM_URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-07-31T12:08:04.525135" elapsed="2.314588"/>
+<status status="PASS" start="2025-07-31T14:45:59.527534" elapsed="2.821325"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-07-31T12:08:06.840723" elapsed="0.045508"/>
+<status status="PASS" start="2025-07-31T14:46:02.348859" elapsed="0.108445"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-07-31T12:08:07.898009" level="INFO">Slept 1 second.</msg>
+<msg time="2025-07-31T14:46:03.477424" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-07-31T12:08:06.886231" elapsed="1.012777"/>
+<status status="PASS" start="2025-07-31T14:46:02.457304" elapsed="1.020120"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-31T14:46:03.478425" level="INFO">Clicking element 'id=name'.</msg>
+<arg>id=name</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-31T14:46:03.477424" elapsed="0.102932"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-07-31T12:08:07.900001" level="INFO">Typing text '31-12-2004' into text field 'id=dob'.</msg>
+<msg time="2025-07-31T14:46:03.582353" level="INFO">Typing text 'sanjai' into text field 'id=name'.</msg>
+<arg>id=name</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-31T14:46:03.581355" elapsed="0.096559"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-31T14:46:04.683752" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-31T14:46:03.678915" elapsed="1.004837"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-31T14:46:04.684707" level="INFO">Clicking element 'id=email'.</msg>
+<arg>id=email</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-31T14:46:04.683752" elapsed="0.103798"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-31T14:46:04.788549" level="INFO">Typing text 'sanjai@gmail.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-31T14:46:04.787550" elapsed="0.131928"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-31T14:46:05.935942" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-31T14:46:04.919478" elapsed="1.016464"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-31T14:46:05.936941" level="INFO">Clicking element 'id=gender'.</msg>
+<arg>id=gender</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-31T14:46:05.935942" elapsed="0.076682"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-31T14:46:07.022580" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-31T14:46:06.012624" elapsed="1.009956"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-31T14:46:07.023812" level="INFO">Clicking element 'id=mobile'.</msg>
+<arg>id=mobile</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-31T14:46:07.022580" elapsed="0.055421"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-31T14:46:07.078728" level="INFO">Typing text '9898989878' into text field 'id=mobile'.</msg>
+<arg>id=mobile</arg>
+<arg>${PHONE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-31T14:46:07.078728" elapsed="0.112077"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-31T14:46:08.200652" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-31T14:46:07.190805" elapsed="1.010996"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-31T14:46:08.202826" level="INFO">Clicking element 'id=dob'.</msg>
+<arg>id=dob</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-31T14:46:08.201801" elapsed="0.081499"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-31T14:46:08.284310" level="INFO">Typing text '31-12-2004' into text field 'id=dob'.</msg>
 <arg>id=dob</arg>
 <arg>31-12-2004</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-31T12:08:07.899008" elapsed="0.083074"/>
-</kw>
-<kw name="Press Key" owner="SeleniumLibrary">
-<arg>id=dob</arg>
-<arg>Return</arg>
-<doc>Simulates user pressing key on element identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-31T12:08:07.982082" elapsed="0.054653"/>
+<status status="PASS" start="2025-07-31T14:46:08.283806" elapsed="0.105548"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-07-31T12:08:11.040260" level="INFO">Slept 3 seconds.</msg>
+<msg time="2025-07-31T14:46:09.394994" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-31T14:46:08.389354" elapsed="1.005640"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-31T14:46:09.396013" level="INFO">Clicking element 'id=subjects'.</msg>
+<arg>id=subjects</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-31T14:46:09.394994" elapsed="0.068648"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-31T14:46:09.464643" level="INFO">Typing text 'TESTING' into text field 'id=subjects'.</msg>
+<arg>id=subjects</arg>
+<arg>${SUBJECT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-31T14:46:09.464643" elapsed="0.169146"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-31T14:46:10.643683" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-31T14:46:09.633789" elapsed="1.010409"/>
+</kw>
+<kw name="Page Should Contain Checkbox" owner="SeleniumLibrary">
+<msg time="2025-07-31T14:46:10.666083" level="INFO">Current page contains checkbox 'xpath=//*[@id="hobbies"]'.</msg>
+<arg>xpath=//*[@id="hobbies"]</arg>
+<doc>Verifies checkbox ``locator`` is found from the current page.</doc>
+<status status="PASS" start="2025-07-31T14:46:10.644708" elapsed="0.021375"/>
+</kw>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2025-07-31T14:46:10.667379" level="INFO">Selecting checkbox 'xpath=//*[@id="hobbies"]'.</msg>
+<arg>xpath=//*[@id="hobbies"]</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-31T14:46:10.667379" elapsed="0.081046"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-31T14:46:11.750360" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-31T14:46:10.748425" elapsed="1.001935"/>
+</kw>
+<kw name="Choose File" owner="SeleniumLibrary">
+<msg time="2025-07-31T14:46:11.761384" level="INFO">Sending C:\Users\sanja\Documents\TestingseleniumRobot to browser.</msg>
+<arg>xpath=//input[@name='picture']</arg>
+<arg>C:\\Users\\sanja\\Documents\\TestingseleniumRobot</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="PASS" start="2025-07-31T14:46:11.750360" elapsed="0.088909"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-31T14:46:12.840074" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-31T14:46:11.839776" elapsed="1.000298"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-31T14:46:12.845078" level="INFO">Clicking element 'xpath=//textarea[@name='picture']'.</msg>
+<arg>xpath=//textarea[@name='picture']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-31T14:46:12.841080" elapsed="0.082306"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-31T14:46:12.925385" level="INFO">Typing text 'CHENNAI' into text field 'xpath=//textarea[@name='picture']'.</msg>
+<arg>xpath=//textarea[@name='picture']</arg>
+<arg>${ADDRESS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-31T14:46:12.924386" elapsed="0.141859"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-31T14:46:14.066734" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-31T14:46:13.066245" elapsed="1.002489"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-31T14:46:14.068734" level="INFO">Clicking element 'xpath=//*[@id="state"]/option[1]'.</msg>
+<arg>xpath=//*[@id="state"]/option[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-31T14:46:14.068734" elapsed="0.130398"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-31T14:46:15.205554" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-31T14:46:14.199132" elapsed="1.006422"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-31T14:46:15.210108" level="INFO">Clicking element 'xpath=//*[@id="state"]/option[2]'.</msg>
+<arg>xpath=//*[@id="state"]/option[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-31T14:46:15.209707" elapsed="0.044470"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-31T14:46:15.254177" level="INFO">Clicking element 'xpath=//*[@id="city"]/option[1]'.</msg>
+<arg>xpath=//*[@id="city"]/option[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-31T14:46:15.254177" elapsed="0.038554"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-31T14:46:16.307428" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-31T14:46:15.293739" elapsed="1.016139"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-31T14:46:16.310922" level="INFO">Clicking element 'xpath=//*[@id="city"]/option[2]'.</msg>
+<arg>xpath=//*[@id="city"]/option[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-31T14:46:16.309878" elapsed="0.059685"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-31T14:46:16.370572" level="INFO">Clicking button 'xpath=//*[@id="practiceForm"]/div[11]/input'.</msg>
+<arg>xpath=//*[@id="practiceForm"]/div[11]/input</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-31T14:46:16.369563" elapsed="0.101846"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-31T14:46:19.478284" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-07-31T12:08:08.036735" elapsed="3.003525"/>
+<status status="PASS" start="2025-07-31T14:46:16.472415" elapsed="3.006861"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-07-31T12:08:11.041253" elapsed="2.214712"/>
+<status status="PASS" start="2025-07-31T14:46:19.480277" elapsed="2.488889"/>
 </kw>
-<status status="PASS" start="2025-07-31T12:08:04.524216" elapsed="8.731749"/>
+<status status="PASS" start="2025-07-31T14:45:59.526534" elapsed="22.442632"/>
 </kw>
-<status status="PASS" start="2025-07-31T12:08:04.523188" elapsed="8.734763"/>
+<status status="PASS" start="2025-07-31T14:45:59.526534" elapsed="22.443801"/>
 </test>
-<status status="PASS" start="2025-07-31T12:08:04.275456" elapsed="8.990523"/>
+<status status="PASS" start="2025-07-31T14:45:59.249167" elapsed="22.723189"/>
 </suite>
 <statistics>
 <total>
@@ -60,6 +246,6 @@
 </suite>
 </statistics>
 <errors>
-<msg time="2025-07-31T12:08:04.275456" level="ERROR">Error in file 'C:\Users\sanja\Documents\TestingseleniumRobot\form.robot' on line 16: Setting variable 'C:\\Users\\sanja\\Documents\\TestingseleniumRobot' failed: Invalid variable name 'C:\\Users\\sanja\\Documents\\TestingseleniumRobot'.</msg>
+<msg time="2025-07-31T14:45:59.249167" level="ERROR">Error in file 'C:\Users\sanja\Documents\TestingseleniumRobot\form.robot' on line 16: Setting variable 'C:\\Users\\sanja\\Documents\\TestingseleniumRobot' failed: Invalid variable name 'C:\\Users\\sanja\\Documents\\TestingseleniumRobot'.</msg>
 </errors>
 </robot>

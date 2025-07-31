@@ -21,6 +21,8 @@ ${LASTNAME}   CSE
 ${USERNAME}  sanjai
 ${PASSWORD}  12345678
 ${ADDRESS}   CHENNAI
+${PHONE}   9898989878
+${SUBJECT}  TESTING
 
 *** Keywords ***
 Login Page
@@ -229,11 +231,57 @@ FORM PAGE
     Maximize Browser Window
     Sleep  1s
 
+    Click Element  id=name
+    Input Text  id=name  ${USERNAME}
+    Sleep  1s
+#    Press Key  id=name  RETURN
 
+    Click Element  id=email
+    Input Text  id=email  ${EMAIL}
+    Sleep  1s
+#    Press Key  id=email   RETURN
+
+    Click Element  id=gender
+    Sleep  1s
+
+    Click Element  id=mobile
+    Input Text  id=mobile  ${PHONE}
+    Sleep  1s
+#    Press Key  id=mobile    RETURN
+
+
+    Click Element  id=dob
     Input Text    id=dob    31-12-2004
-    Press Key   id=dob  Return
-    Sleep  3s
+    Sleep  1s
+#    Press Key   id=dob  RETURN
 
+    Click Element  id=subjects
+    Input Text  id=subjects  ${SUBJECT}
+    Sleep  1s
+#    Press Key  id=subjects  RETURN
+
+    Page Should Contain Checkbox  xpath=//*[@id="hobbies"]
+    Select Checkbox  xpath=//*[@id="hobbies"]
+    Sleep  1s
+
+    Choose File  xpath=//input[@name='picture']  ${CURDIR}
+    Sleep  1s
+
+    Click Element  xpath=//textarea[@name='picture']
+    Input Text  xpath=//textarea[@name='picture']   ${ADDRESS}
+    Sleep  1s
+
+    Click Element  xpath=//*[@id="state"]/option[1]
+    Sleep  1s
+    Click Element  xpath=//*[@id="state"]/option[2]
+
+    Click Element  xpath=//*[@id="city"]/option[1]
+    Sleep  1s
+    Click Element  xpath=//*[@id="city"]/option[2]
+
+
+    Click Button  xpath=//*[@id="practiceForm"]/div[11]/input
+    Sleep  3s
 
     Close Browser
 
