@@ -8,6 +8,12 @@ ${TEXTFIELD}   https://www.tutorialspoint.com/selenium/practice/text-box.php
 ${CHECK_URL}   https://www.tutorialspoint.com/selenium/practice/check-box.php
 ${RADIO_URL}   https://www.tutorialspoint.com/selenium/practice/radio-button.php
 ${WEB_URL}    https://www.tutorialspoint.com/selenium/practice/webtables.php
+${BUTTON_URL}  https://www.tutorialspoint.com/selenium/practice/buttons.php
+${LINK_URL}   https://www.tutorialspoint.com/selenium/practice/links.php
+${BROKEN_URL}  https://www.tutorialspoint.com/selenium/practice/broken-links.php
+${UPLOAD_URL}  https://www.tutorialspoint.com/selenium/practice/upload-download.php
+${FORM_URL}   https://www.tutorialspoint.com/selenium/practice/selenium_automation_practice.php
+${CURDIR}   C:/Users/sanja/Downloads/sampleFile.jpeg"
 ${BROWSER}  chrome
 ${EMAIL}  sanjai@gmail.com
 ${FIRSTNAME}  SANJAI
@@ -68,10 +74,10 @@ REGISTER PAGE
     Click Button  xpath=//*[@id="signupForm"]/div[5]/input
     Sleep  3s
 
-    Click Button  xpath=//*[@id="signupForm"]/div[5]/a
-    Sleep  5s
+#    Click Button  xpath=//*[@id="signupForm"]/div[5]/a
+#    Sleep  5s
 
-    Close Browser
+#    Close Browser
 
 TEXT FIELD
 
@@ -101,7 +107,7 @@ TEXT FIELD
 
     Click Button  //*[@id="TextForm"]/div[5]/input
 
-    Close Browser
+#    Close Browser
 
 CHECK BOX
     Open Browser  ${CHECK_URL}  ${BROWSER}
@@ -128,7 +134,7 @@ CHECK BOX
     Select Checkbox  xpath=//*[@id="c_bs_2"]
     Sleep  5s
 
-    Close Browser
+#    Close Browser
 
 RADIO BUTTON
     Open Browser  ${RADIO_URL}  ${BROWSER}
@@ -145,11 +151,91 @@ RADIO BUTTON
 
 
     Sleep  2s
+#    Close Browser
+
+
+#WEB TABLE
+#    Open Browser  ${WEB_URL}  ${BROWSER}
+#
+
+BUTTON TABLE
+    Open Browser  ${BUTTON_URL}  ${BROWSER}
+    Maximize Browser Window
+    Sleep  2s
+
+    Page Should Contain Button  xpath=/html/body/main/div/div/div[2]/button[1]
+    Click Button  xpath=/html/body/main/div/div/div[2]/button[1]
+    Sleep  2s
+
+    Page Should Contain Button  xpath=/html/body/main/div/div/div[2]/button[2]
+    Click Button  xpath=/html/body/main/div/div/div[2]/button[2]
+    Sleep  2s
+
+    Page Should Contain Button  xpath=/html/body/main/div/div/div[2]/button[3]
+    Click Button  xpath=/html/body/main/div/div/div[2]/button[3]
+    Double Click Element   xpath=/html/body/main/div/div/div[2]/button[3]
+    Sleep  2s
+
+#    Close Browser
+
+LINK PAGE
+    Open Browser  ${LINK_URL}  ${BROWSER}
+    Maximize Browser Window
+    Sleep  1s
+
+    Page Should Contain Link  xpath=/html/body/main/div/div/div[2]/p[1]/a
+    Click Link  xpath=/html/body/main/div/div/div[2]/p[1]/a
+    Sleep  3s
+
+    Page Should Contain Link  xpath=//*[@id="created"]
+    Click Link  xpath=//*[@id="created"]
+    Sleep  3s
+
+    Close Browser
+
+BROKEN PAGE
+    Open Browser  ${BROKEN_URL}  ${BROWSER}
+    Maximize Browser Window
+    Sleep  1s
+
+    Page Should Contain Link  xpath=/html/body/main/div/div/div[2]/p[3]/a
+    Click Link  xpath=/html/body/main/div/div/div[2]/p[3]/a
+    Sleep  3s
+
+    Page Should Contain Link  xpath=/html/body/main/div/h4/a
+    Click Link  xpath=/html/body/main/div/h4/a
+    Sleep  2s
+
     Close Browser
 
 
-WEB TABLE
-    Open Browser  ${WEB_URL}  ${BROWSER}
+UPLOAD DOWNLOAD
+    Open Browser  ${UPLOAD_URL}  ${BROWSER}
+    Maximize Browser Window
+    Sleep  1s
+
+    Page Should Contain Link  xpath=//*[@id="downloadButton"]
+    Click Link  xpath=//*[@id="downloadButton"]
+    Sleep  2s
+
+#    Page Should Contain Link  xpath=//*[@id="uploadFile"]
+    Choose File  id:uploadFile  ${CURDIR}
+    Sleep  2s
+
+    Close Browser
+
+FORM PAGE
+    Open Browser  ${FORM_URL}  ${BROWSER}
+    Maximize Browser Window
+    Sleep  1s
+
+
+    Input Text    id=dob    31-12-2004
+    Press Key   id=dob  Return
+    Sleep  3s
+
+
+    Close Browser
 
 
 
@@ -164,17 +250,18 @@ FORM PAGE
 #    TEXT FIELD
 #    CHECK BOX
 #    RADIO BUTTON
-    WEB TABLE
+#    WEB TABLE
+#    BUTTON TABLE
+#    LINK PAGE
+#    BROKEN PAGE
+#    UPLOAD DOWNLOAD
+    FORM PAGE
+
 
 
 
 
 #    Login Page
-
-
-
-
-
 
 
 
